@@ -13,11 +13,12 @@
 
 <body>
     <header>
-        <h1 class="header-title text-center text-info">Money Invest</h1>
+        <h1 class="header-title text-center text-info my-4">Money Invest Calculation</h1>
     </header>
     <main>
         <section class="main-section container  text-center">
             <div class="row">
+                <!-- img Area -->
                 <div class="col-md-6">
                     <div class="card">
                         <img src="images/pexels.jpeg" alt="">
@@ -25,35 +26,38 @@
                 </div>
                 <div class="col-md-6 p-3 bg-light">
                     <div class="right-side">
+                        <!-- Income Area -->
                         <h2>Income</h2>
                         <div class="row mb-3">
                             <label class="col-md-2 col-form-label">Income</label>
                             <div class="col-md-10">
-                                <input id="income-Input" type="text" class="form-control">
+                                <input id="income-field" type="text" class="form-control bg-secondary bg-opacity-10">
                             </div>
                         </div>
+                        <!-- Expenses Area -->
                         <h2>Expenses</h2>
                         <div class="row mb-3">
                             <label class="col-md-2 col-form-label">Food</label>
                             <div class="col-md-10">
-                                <input id="food-Input" type="text" class="form-control">
+                                <input id="food-field" type="text" class="form-control bg-secondary bg-opacity-10">
                             </div>
                         </div>
                         <div class="row mb-3">
                             <label class="col-md-2 col-form-label">Rent</label>
                             <div class="col-md-10">
-                                <input id="rent-Input" type="text" class="form-control">
+                                <input id="rent-field" type="text" class="form-control bg-secondary bg-opacity-10">
                             </div>
                         </div>
                         <div class="row mb-3">
                             <label class="col-md-2 col-form-label">Clothes</label>
                             <div class="col-md-10">
-                                <input id="clothes-Input" type="text" class="form-control">
+                                <input id="clothes-field" type="text" class="form-control bg-secondary bg-opacity-10">
                             </div>
                         </div>
-                        <button id="calculate-button" class="btn btn-info text-white px-5 fw-bold">Calculate</button>
-                        <h2>Total Expenses: <span id="total-expenses">5000</span></h2>
-                        <h2 class="Balance my-4">Balance: <span>3000</span></h2>
+                        <!-- Calculate Area -->
+                        <button id="calculate-button" class="btn btn-info text-white px-5 fw-bold ">Calculate</button>
+                        <h2 class="fs-3 my-4">Total Expenses: <span id="balanceId">00</span></h2>
+                        <h2 class="Balance my-4 fs-3">Balance: <span id="total-balance">00</span></h2>
 
                         <!-- saving amount area -->
                         <div class="row">
@@ -61,16 +65,18 @@
                                 <div class="row mb-3">
                                     <label class="col-md-2 col-form-label">Save</label>
                                     <div class="col-md-10">
-                                        <input type="text" class="form-control">
+                                        <input id="saving-input" type="text"
+                                            class="form-control bg-secondary bg-opacity-10">
                                     </div>
                                 </div>
                             </div>
                             <div class="col-md-2">%</div>
-                            <div class="col-md-5"><button class="btn btn-info w-100 fw-bold text-white">Save</button>
+                            <div class="col-md-5">
+                                <button id="saving-btn" class="btn btn-info w-100 fw-bold text-white">Save</button>
                             </div>
                         </div>
-                        <h2>Saving Amount: <span>3000</span></h2>
-                        <h2 class="remaining">Remaining Balance: <span>2000</span></h2>
+                        <h2 class="fs-3">Saving Amount: <span id="saving-ammount">00</span></h2>
+                        <h2 class="remaining fs-3">Remaining Balance: <span id="remaing-balance">00</span></h2>
                     </div>
                 </div>
             </div>
