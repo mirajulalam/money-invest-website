@@ -1,9 +1,9 @@
 function calculateItem() {
     const mainInput = document.getElementById('income-field').value;
     const foodInput = document.getElementById('food-field').value;
-    console.log(mainInput);
+
     const rentInput = document.getElementById('rent-field').value;
-    console.log(mainInput);
+
     const clothInput = document.getElementById('clothes-field').value;
 
     const totalItemAmmount = parseFloat(foodInput) + parseFloat(rentInput) + parseFloat(clothInput);
@@ -12,11 +12,18 @@ function calculateItem() {
     const balance = parseFloat(mainInput) - totalItemAmmount
 
     if (isNaN(mainInput) || isNaN(foodInput) || isNaN(rentInput) || isNaN(clothInput)) {
-        alert('Please Enter the number input field');
+        alert('Please insert a valid number');
         return alert;
     }
     else if (mainInput == '' || foodInput == '' || rentInput == '' || clothInput == '') {
         alert('Please Enter the number input field')
+    }
+    else if (
+        mainInput < 0 ||
+        foodInput < 0 ||
+        rentInput < 0 ||
+        clothInput < 0) {
+        alert('Please Insert only positive Number');
     }
     else {
 
