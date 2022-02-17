@@ -1,16 +1,18 @@
 function calculateItem() {
+    // inputId calling
     const mainInput = document.getElementById('income-field').value;
+
     const foodInput = document.getElementById('food-field').value;
 
     const rentInput = document.getElementById('rent-field').value;
 
     const clothInput = document.getElementById('clothes-field').value;
-
+    // total calculation
     const totalItemAmmount = parseFloat(foodInput) + parseFloat(rentInput) + parseFloat(clothInput);
     const totalBalance = document.getElementById('total-balance');
     const expencesBalance = document.getElementById('balanceId');
     const balance = parseFloat(mainInput) - totalItemAmmount
-
+    // error handle
     if (isNaN(mainInput) || isNaN(foodInput) || isNaN(rentInput) || isNaN(clothInput)) {
         alert('Please insert a valid number');
         return alert;
@@ -34,6 +36,7 @@ function calculateItem() {
 
 
 function savingAmmount() {
+    // savingAmmount calculation
     const mainInput = document.getElementById('income-field').value;
     const savingInput = document.getElementById('saving-input').value;
     const savingText = document.getElementById('saving-ammount');
@@ -44,10 +47,10 @@ function savingAmmount() {
     savingText.innerText = savingTotalAmmount;
     remaingText.innerText = remaingAmmount;
 }
-
+// function calling
 document.getElementById('calculate-button').addEventListener('click', function () {
     calculateItem();
-})
+});
 document.getElementById('saving-btn').addEventListener('click', function () {
     savingAmmount();
-})
+});
